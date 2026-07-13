@@ -1,0 +1,34 @@
+package testscript;
+
+import java.io.IOException;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import pages.LoginPage;
+import pages.ManageNewsPage;
+import utilities.ExcelUtility;
+
+public class ManageNewsTest extends Base {
+	
+	@Test
+	public void createNewManageNews() throws IOException
+	 {
+		 String usernamevalue = ExcelUtility.getStringData(1, 0, "Loginpage");
+			String passwordvalue = ExcelUtility.getStringData(1, 1, "Loginpage");
+			LoginPage loginpage = new LoginPage(driver);
+			loginpage.enterUserName(usernamevalue);
+			loginpage.password(passwordvalue);
+			loginpage.signIn();
+			String discountvalue = ExcelUtility.getStringData(1, 0,"Managenewspage");
+			ManageNewsPage managenewspage = new ManageNewsPage(driver);
+			managenewspage.pageScroll();
+			managenewspage.clickManageNewsMoreInfo();
+			managenewspage.clickManageNewsNewButton();
+			managenewspage.enterNews(discountvalue);
+			managenewspage.clickSave();
+			boolean alert = managenewspage.isAlertDisplayed();
+			Assert.assertTrue(alert);
+			
+}
+}

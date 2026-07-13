@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Crossbrowsertesting">
+   <test name="ChromeTest">
+  <parameter name="browser" value="Chrome"></parameter>
+    <classes>
+      <class name="testscript.ManageCategoryTest">
+      <methods>
+     <include name="createNewManageCategory"></include>
+      </methods>
+      </class>
+      <class name="testscript.AdminUsersTest">
+      <methods>
+     <include name="createNewAdminUser"></include>
+      </methods>
+      </class>
+      <class name="testscript.ManageNewsTest">
+      <methods>
+     <include name="createNewManageNews"></include>
+      </methods>
+      </class>
+      <class name="testscript.ManageDeliveryBoyTest">
+      <methods>
+     <include name="createNewManageDeliveryBoy"></include>
+      </methods>
+      </class>
+      <class name="testscript.ManageUsersTest">
+      <methods>
+     <include name="createNewManageNews"></include>
+      </methods>
+      </class>
+      <class name="testscript.LoginTest">
+      <methods>
+     <include name="verifyUserIsAbleToLoginWithValidCredentials"></include>
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  <test name="FirefoxTest">
+  <parameter name="browser" value="Firefox"></parameter>
+    <classes>
+      <class name="testscript.ManageCategoryTest">
+      <methods>
+     <include name="createNewManageCategory"></include>
+      </methods>
+      </class>
+      <class name="testscript.AdminUsersTest">
+      <methods>
+     <include name="createNewAdminUser"></include>
+      </methods>
+      </class>
+      <class name="testscript.ManageNewsTest">
+      <methods>
+     <include name="createNewManageNews"></include>
+      </methods>
+      </class>
+      <class name="testscript.ManageDeliveryBoyTest">
+      <methods>
+     <include name="createNewManageDeliveryBoy"></include>
+      </methods>
+      </class>
+      <class name="testscript.ManageUsersTest">
+      <methods>
+     <include name="createNewManageNews"></include>
+      </methods>
+      </class>
+      <class name="testscript.LoginTest">
+      <methods>
+     <include name="verifyUserIsAbleToLoginWithValidCredentials"></include>
+      </methods>
+      </class>
+    </classes>
+  </test>
+</suite> <!-- Suite -->
