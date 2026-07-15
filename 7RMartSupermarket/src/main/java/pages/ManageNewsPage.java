@@ -31,7 +31,7 @@ js.executeScript("window.scrollBy(0,document.body.scrollHeight)", "");
  }
  public void clickManageNewsMoreInfo()
  {
-     waitutility.waitForElementToBeClickable(driver, footerinfo);
+     //waitutility.waitForElementToBeClickable(driver, footerinfo);
      footerinfo.click();
  }
 
