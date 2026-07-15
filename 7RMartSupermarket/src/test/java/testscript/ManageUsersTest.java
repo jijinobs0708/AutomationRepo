@@ -11,7 +11,7 @@ import utilities.ExcelUtility;
 
 public class ManageUsersTest extends Base {
 	
-	@Test
+	@Test (description = "to test Manage users")
 	public void createNewManageNews() throws IOException
 	 {
 		 String usernamevalue = ExcelUtility.getStringData(1, 0, "Loginpage");

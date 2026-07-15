@@ -10,7 +10,7 @@ import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class AdminUsersTest extends Base{
-	@Test
+	@Test (description = "to test Admin users")
  public void createNewAdminUser() throws IOException
  {
 	 String usernamevalue = ExcelUtility.getStringData(1, 0, "Loginpage");

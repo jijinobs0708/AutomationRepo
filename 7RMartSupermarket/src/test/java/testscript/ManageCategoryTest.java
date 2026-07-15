@@ -10,7 +10,7 @@ import pages.ManageCategoryPage;
 import utilities.ExcelUtility;
 
 public class ManageCategoryTest extends Base{
-	@Test
+	@Test (description = "to test Manage Category")
 	public void createNewManageCategory() throws IOException
 	{
 		String usernamevalue = ExcelUtility.getStringData(1, 0, "Loginpage");

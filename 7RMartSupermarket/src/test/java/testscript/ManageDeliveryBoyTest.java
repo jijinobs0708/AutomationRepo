@@ -11,7 +11,7 @@ import utilities.ExcelUtility;
 
 public class ManageDeliveryBoyTest extends Base{
 
-	@Test
+	@Test(description = "to test Manage delivery Boy")
 	public void createNewManageDeliveryBoy() throws IOException
 	{
 		String usernamevalue = ExcelUtility.getStringData(1, 0, "Loginpage");
