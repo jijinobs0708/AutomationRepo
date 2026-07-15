@@ -11,7 +11,7 @@ import utilities.ExcelUtility;
 
 public class ManageNewsTest extends Base {
 	
-	@Test
+	@Test(retryAnalyzer=retry.Retry.class,groups= {"regression"},description="for managing news")
 	public void createNewManageNews() throws IOException
 	 {
 		 String usernamevalue = ExcelUtility.getStringData(1, 0, "Loginpage");
