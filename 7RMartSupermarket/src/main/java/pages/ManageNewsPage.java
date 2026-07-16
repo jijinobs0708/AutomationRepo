@@ -26,10 +26,7 @@ public class ManageNewsPage {
  
  /*public void pageScroll()
  {
-
 pageutility.javaScriptExecutorFullDocumentScroll(driver);
-
-
  }
  /*public void clickManageNewsMoreInfo()
  {

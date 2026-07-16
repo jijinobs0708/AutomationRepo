@@ -31,7 +31,6 @@ public class HomePage {
 		 
 		 public HomePage pageScroll()
 		 {
-
 		pageutility.javaScriptExecutorFullDocumentScroll(driver);
 		return this;
 
