@@ -1,16 +1,17 @@
 package pages;
 
-import org.openqa.selenium.JavascriptExecutor;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.PageUtility;
 import utilities.WaitUtility;
 
 public class ManageDeliveryBoyPage {
 	 public WebDriver driver;
-	 @FindBy(xpath = "//a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-deliveryboy']") WebElement footerinfo;
+	// @FindBy(xpath = "//a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-deliveryboy']") WebElement managedeliveryboymoreinfo;
 	 @FindBy(xpath = "//a[@onclick='click_button(1)']") WebElement newdelivery;
 	 @FindBy(xpath = "//input[@id='name']")WebElement name;
 	 @FindBy(xpath = "//input[@id='email']")WebElement email;
@@ -22,53 +23,63 @@ public class ManageDeliveryBoyPage {
 	 @FindBy(xpath = "//p[text() = 'Dashboard']") WebElement dashboard;
 	 @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']") WebElement alert;
 	 WaitUtility waitutility = new WaitUtility();
+	 PageUtility pageutility = new PageUtility();
 	 
 	 public ManageDeliveryBoyPage(WebDriver driver) 
 	 {
 		this.driver = driver;
 		PageFactory.initElements(driver,this);
 	 }
-	 public void manageDeliveryBoyMoreInfo()
+	 /*public void clickManageDeliveryBoyMoreInfo()
 	 {
-		 footerinfo.click();
-	 }
-	 public void manageDeliveryBoyClickNew()
+		 managedeliveryboymoreinfo.click();
+	 }*/
+	 public ManageDeliveryBoyPage manageDeliveryBoyClickNew()
 	 {
 		 newdelivery.click();
+		 return this;
 	 }
-	 public void addName(String namevalue)
+	 public ManageDeliveryBoyPage addName(String namevalue)
 	 {
 		 name.sendKeys(namevalue);
+		 return this;
 	 }
-	 public void addEmail(String emailvalue)
+	 public ManageDeliveryBoyPage addEmail(String emailvalue)
 	 {
 		 email.sendKeys(emailvalue);
+		 return this;
 	 }
-	 public void addPhone(int phonevalue)
+	 public ManageDeliveryBoyPage addPhone(int phonevalue)
 	 {
 		phone.sendKeys(String.valueOf(phonevalue));
+		return this;
 	 }
-	 public void addAddress(String addressvalue)
+	 public ManageDeliveryBoyPage addAddress(String addressvalue)
 	 {
 		 address.sendKeys(addressvalue);
+		 return this;
 	 }
-	 public void addUsername(String usernamevalue1)
+	 public ManageDeliveryBoyPage addUsername(String usernamevalue1)
 	 {
 		 username.sendKeys(usernamevalue1);
+		 return this;
 	 }
-	 public void addPassword(String passwordvalue1)
+	 public ManageDeliveryBoyPage addPassword(String passwordvalue1)
 	 {
 		 password.sendKeys(passwordvalue1);
+		 return this;
 	 }
-	 public void pageScroll()
+	 public ManageDeliveryBoyPage pageScroll()
 	 {
-		 JavascriptExecutor js = (JavascriptExecutor) driver;
-	js.executeScript("window.scrollBy(0,150)","");
+		 pageutility.javaScriptExecutorFullDocumentScroll(driver);
+		 return this;
+	
 	 }
-	 public void clickSave()
+	 public ManageDeliveryBoyPage clickSave()
 	 {
 		 waitutility.waitForElementToBeClickable(driver, save);
 		 save.click();
+		 return this;
 	 }
 	 public boolean isDashBoardDisplayed()
 	 {

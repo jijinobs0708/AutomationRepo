@@ -5,7 +5,8 @@
     <classes>
       <class name="testscript.ManageCategoryTest">
         <methods>
-          <include name="initilisebrowser"/>
+          <include name="initialisebrowser"/>
+          <include name="browserQuit"/>
           <include name="createNewManageCategory"/>
         </methods>
       </class> <!-- testscript.ManageCategoryTest -->

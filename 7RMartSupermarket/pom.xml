@@ -30,6 +30,12 @@
     <scope>compile</scope>
 </dependency>
 <dependency>
+    <groupId>com.github.javafaker</groupId>
+    <artifactId>javafaker</artifactId>
+    <version>0.16</version>
+    <scope>compile</scope>
+</dependency>
+<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>5.0.9</version>

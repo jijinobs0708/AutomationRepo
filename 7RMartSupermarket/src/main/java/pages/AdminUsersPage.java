@@ -10,7 +10,7 @@ import utilities.PageUtility;
 public class AdminUsersPage {
 public WebDriver driver;
 //@FindBy(xpath = "//p[text() ='Admin Users']")WebElement adminuser;
-@FindBy(xpath = "//a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-admin']")WebElement footerinfo;
+//@FindBy(xpath = "//a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-admin']")WebElement adminmoreinfo;
 @FindBy(xpath = "//a[@class='btn btn-rounded btn-danger']")WebElement newuser;
 @FindBy(xpath = "//input[@id='username']")WebElement username1;
 @FindBy(xpath = "//input[@id='password']")WebElement password1;
@@ -26,33 +26,38 @@ public AdminUsersPage(WebDriver driver) {
 
 }
 
- public void clickAdminMoreInfo()
+ /*public void clickAdminMoreInfo()
  {
-	 footerinfo.click();
- }
-public void clickNew()
+	 adminmoreinfo.click();
+ }*/
+public AdminUsersPage clickNew()
 {
 	newuser.click();
+	return this;
 }
 
-public void enterUserName(String usernamevalue1)
+public AdminUsersPage enterUserName(String usernamevalue1)
 {
 	 username1.sendKeys(usernamevalue1);
+	 return this;
 }
-public void enterPassword(String passwordvalue1)
+public AdminUsersPage enterPassword(String passwordvalue1)
 {
 	password1.sendKeys(passwordvalue1);
+	return this;
 }
 
-public void selectUserType(String userType)
+public AdminUsersPage selectUserType(String userType)
 {
 	
 	pageutility.dropDownVisibleText(usertype, userType);
+	return this;
 }
 
-public void save()
+public AdminUsersPage save()
 {
 	save.click();
+	return this;
 }
 public boolean isDashBoardDisplayed()
 {

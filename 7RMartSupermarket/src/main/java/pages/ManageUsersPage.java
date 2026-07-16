@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ManageUsersPage {
 	public WebDriver driver;
-	@FindBy(xpath = "//a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-user']")WebElement footerinfo;
+	//@FindBy(xpath = "//a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-user']")WebElement manageusersmoreinfo;
 	@FindBy(xpath = "//a[@href='javascript:void(0)']") WebElement search;
 	@FindBy(xpath ="//input[@id='un']") WebElement name;
 	@FindBy(xpath = "//button[@name='Search']")WebElement searchbutton;
@@ -16,21 +16,24 @@ public class ManageUsersPage {
 		this.driver = driver;
 		PageFactory.initElements(driver,this);
 	}
-	 public void manageUsersMoreInfo()
+	/* public void clickManageUsersMoreInfo()
 	 {
-		 footerinfo.click();
-	 }
-	 public void clickManageUsersSearch()
+		 manageusersmoreinfo.click();
+	 }*/
+	 public ManageUsersPage clickManageUsersSearch()
 	 {
 		 search.click();
+		 return this;
 	 }
-	 public void addNameForSearching(String namevalue)
+	 public ManageUsersPage addNameForSearching(String namevalue)
 	 {
 		 name.sendKeys(namevalue);
+		 return this;
 	 }
-	 public void clickSearchbutton()
+	 public ManageUsersPage clickSearchbutton()
 	 {
 		 searchbutton.click();
+		 return this;
 	 }
 	 public boolean isDashBoardDisplayed()
 	 {

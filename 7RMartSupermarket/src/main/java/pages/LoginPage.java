@@ -17,19 +17,22 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 	}
 
- public void enterUserName(String usernamevalue)
+ public LoginPage enterUserName(String usernamevalue)
  {
 	 username.sendKeys(usernamevalue);
+	 return this;
  }
  
- public void password(String passwordvalue)
+ public LoginPage enterPassword(String passwordvalue)
  {
 	 password.sendKeys(passwordvalue);
+	 return this;
  }
  
- public void signIn()
+ public HomePage signIn()
  {
-	signin.click(); 
+	signin.click();
+	return new HomePage(driver); 
  }
  
  public boolean isDashBoardDisplayed()

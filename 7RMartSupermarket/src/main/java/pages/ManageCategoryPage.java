@@ -1,7 +1,7 @@
 package pages;
 
 
-import org.openqa.selenium.JavascriptExecutor;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,11 +9,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import constant.Constant;
 import utilities.FileUploadUtility;
+import utilities.PageUtility;
 import utilities.WaitUtility;
 
 public class ManageCategoryPage {
 public WebDriver driver;
-@FindBy(xpath = "//a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-category']")WebElement footerinfo;
+//@FindBy(xpath = "//a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-category']")WebElement managecategorymoreinfo;
 @FindBy(xpath = "//a[@onclick='click_button(1)']")WebElement newcategory;
 @FindBy(xpath = "//input[@id='category']")WebElement category;
 @FindBy(xpath ="//li[@id=\"1-selectable\"]" )WebElement goodness ;
@@ -26,52 +27,62 @@ public WebDriver driver;
 @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']") WebElement alert;
 FileUploadUtility fileuploadutility = new FileUploadUtility();
 WaitUtility waitutility = new WaitUtility();
+PageUtility pageutility = new PageUtility();
+
+
 
 public ManageCategoryPage(WebDriver driver) {
 	this.driver = driver;
 	PageFactory.initElements(driver,this);
 }
-public void clickManageCategoryMoreInfo()
+/*public void clickManageCategoryMoreInfo()
 {
-	footerinfo.click();
-}
-public void clickNewCategory()
+	managecategorymoreinfo.click();
+}*/
+public ManageCategoryPage clickNewCategory()
 {
 	newcategory.click();
+	return this;
 }
-public void addCategory(String categoryvalue)
+public ManageCategoryPage addCategory(String categoryvalue)
 {
 	category.sendKeys(categoryvalue);
+	return this;
 	
 }
-public void clickGoodness()
+public ManageCategoryPage clickGoodness()
 {
 	goodness.click();
+	return this;
 }
-public void clickVegan()
+public ManageCategoryPage clickVegan()
 {
 	vegan.click();
+	return this;
 }
-public void clickGlutenfree()
+public ManageCategoryPage clickGlutenfree()
 {
 	glutenfree.click();
+	return this;
 }
-public void clickOrganic()
+public ManageCategoryPage clickOrganic()
 {
 	organic.click();
+	return this;
 }
 
-public void clickChooseFile()
+public ManageCategoryPage clickChooseFile()
 {
 	fileuploadutility.fileUploadUsingSendKeys(choosefile, Constant.FRUITIMG);
+	return this;
 }
 
-public void clickSave()
+public ManageCategoryPage clickSave()
 {
 	waitutility.waitForElementToBeClickable(driver, save);
-	 JavascriptExecutor js = (JavascriptExecutor) driver;
-	 js.executeScript("arguments[0].click();", save);
+	 pageutility.javaScriptExecutorClick(driver, save);
 	//save.click();
+	 return this;
 }
 public boolean isDashBoardDisplayed()
 {

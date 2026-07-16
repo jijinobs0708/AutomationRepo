@@ -5,11 +5,12 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LoginTest extends Base {
-
+HomePage homepage;
 
 	public void verifyUserIsAbleToLoginWithValidCredentials() throws IOException
 	{
@@ -19,9 +20,9 @@ public class LoginTest extends Base {
 	String usernamevalue = ExcelUtility.getStringData(1, 0, "Loginpage");
 	String passwordvalue = ExcelUtility.getStringData(1, 1, "Loginpage");
 	LoginPage loginpage = new LoginPage(driver);
-	loginpage.enterUserName(usernamevalue);
-	loginpage.password(passwordvalue);
-	loginpage.signIn();
+	loginpage.enterUserName(usernamevalue).enterPassword(passwordvalue);
+	// loginpage.password(passwordvalue);
+	homepage = loginpage.signIn();
 	boolean homepage = loginpage.isDashBoardDisplayed();
 	Assert.assertTrue(homepage);
 	}
@@ -33,9 +34,9 @@ public void verifyUserIsNotAbleToLoginWithInvalidPassword() throws IOException
 	String usernamevalue = ExcelUtility.getStringData(2, 0, "Loginpage");
 	String passwordvalue = ExcelUtility.getStringData(2, 1, "Loginpage");
 	LoginPage loginpage = new LoginPage(driver);
-	loginpage.enterUserName(usernamevalue);
-	loginpage.password(passwordvalue);
-	loginpage.signIn();
+	loginpage.enterUserName(usernamevalue).enterPassword(passwordvalue);
+	//loginpage.password(passwordvalue);
+	homepage =loginpage.signIn();
 	boolean alert = loginpage.isAlertDisplayed();
 	Assert.assertTrue(alert);
 }
@@ -47,9 +48,9 @@ public void verifyUserIsNotAbleToLoginWithInvalidEmail() throws IOException
 	String usernamevalue = ExcelUtility.getStringData(3, 0, "Loginpage");
 	String passwordvalue = ExcelUtility.getStringData(3, 1, "Loginpage");
 	LoginPage loginpage = new LoginPage(driver);
-	loginpage.enterUserName(usernamevalue);
-	loginpage.password(passwordvalue);
-	loginpage.signIn();
+	loginpage.enterUserName(usernamevalue).enterPassword(passwordvalue);
+	//loginpage.password(passwordvalue);
+	homepage =loginpage.signIn();
 	boolean alert = loginpage.isAlertDisplayed();
 	Assert.assertTrue(alert);
 }
@@ -61,9 +62,9 @@ public void verifyUserIsNotAbleToLoginWithInvalidCredentials() throws IOExceptio
 	String usernamevalue = ExcelUtility.getStringData(4, 0, "Loginpage");
 	String passwordvalue = ExcelUtility.getStringData(4, 1, "Loginpage");
 	LoginPage loginpage = new LoginPage(driver);
-	loginpage.enterUserName(usernamevalue);
-	loginpage.password(passwordvalue);
-	loginpage.signIn();
+	loginpage.enterUserName(usernamevalue).enterPassword(passwordvalue);
+	//loginpage.password(passwordvalue);
+	homepage =loginpage.signIn();
 	boolean alert = loginpage.isAlertDisplayed();
 	Assert.assertTrue(alert);
 }

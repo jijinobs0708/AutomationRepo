@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="2" ignored="2" total="5" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-15T11:42:03 IST" name="Suite" finished-at="2026-07-15T11:42:25 IST" duration-ms="21573">
+  <suite started-at="2026-07-16T23:56:08 IST" name="Suite" finished-at="2026-07-16T23:56:20 IST" duration-ms="12286">
     <groups>
-      <group name="regression">
-        <method signature="ManageNewsTest.createNewManageNews()[pri:0, instance:testscript.ManageNewsTest@7d3e8655]" name="createNewManageNews" class="testscript.ManageNewsTest"/>
-      </group> <!-- regression -->
     </groups>
-    <test started-at="2026-07-15T11:42:03 IST" name="Test" finished-at="2026-07-15T11:42:25 IST" duration-ms="21573">
-      <class name="testscript.ManageNewsTest">
-        <test-method is-config="true" signature="initialisebrowser(java.lang.String)[pri:0, instance:testscript.ManageNewsTest@7d3e8655]" started-at="2026-07-15T11:42:03 IST" name="initialisebrowser" finished-at="2026-07-15T11:42:07 IST" duration-ms="4181" status="PASS">
+    <test started-at="2026-07-16T23:56:08 IST" name="Test" finished-at="2026-07-16T23:56:20 IST" duration-ms="12286">
+      <class name="testscript.LoginTest">
+        <test-method is-config="true" signature="initialisebrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@38145825]" started-at="2026-07-16T23:56:08 IST" name="initialisebrowser" finished-at="2026-07-16T23:56:11 IST" duration-ms="3429" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,91 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialisebrowser -->
-        <test-method retried="true" signature="createNewManageNews()[pri:0, instance:testscript.ManageNewsTest@7d3e8655]" started-at="2026-07-15T11:42:07 IST" name="createNewManageNews" description="for managing news" finished-at="2026-07-15T11:42:12 IST" duration-ms="4201" status="SKIP">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element is not clickable at point (414, 737)
-  (Session info: chrome=150.0.7871.102)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9157812a630dd426e59beeda1dd67782, clickElement {id=f.A2C69BAACE8F43F473C6145E6D08B387.d.C607C04AA9E2D739DCBB722A5BB981FE.e.25}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.102, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\jijin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57234}, goog:processID: 23000, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57234/devtoo..., se:cdpVersion: 150.0.7871.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (9157812a630dd426e59beeda1dd67782)] -> xpath: //a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-news']]
-Session ID: 9157812a630dd426e59beeda1dd67782]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (414, 737)
-  (Session info: chrome=150.0.7871.102)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9157812a630dd426e59beeda1dd67782, clickElement {id=f.A2C69BAACE8F43F473C6145E6D08B387.d.C607C04AA9E2D739DCBB722A5BB981FE.e.25}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.102, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\jijin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57234}, goog:processID: 23000, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57234/devtoo..., se:cdpVersion: 150.0.7871.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (9157812a630dd426e59beeda1dd67782)] -> xpath: //a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-news']]
-Session ID: 9157812a630dd426e59beeda1dd67782
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-at pages.ManageNewsPage.clickManageNewsMoreInfo(ManageNewsPage.java:35)
-at testscript.ManageNewsTest.createNewManageNews(ManageNewsTest.java:26)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        <test-method signature="verifyUserIsNotAbleToLoginWithInvalidCredentials()[pri:0, instance:testscript.LoginTest@38145825]" started-at="2026-07-16T23:56:11 IST" name="verifyUserIsNotAbleToLoginWithInvalidCredentials" finished-at="2026-07-16T23:56:13 IST" duration-ms="2005" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createNewManageNews -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageNewsTest@7d3e8655]" started-at="2026-07-15T11:42:12 IST" name="browserQuit" finished-at="2026-07-15T11:42:12 IST" duration-ms="508" status="PASS">
+        </test-method> <!-- verifyUserIsNotAbleToLoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@38145825]" started-at="2026-07-16T23:56:13 IST" name="browserQuit" finished-at="2026-07-16T23:56:13 IST" duration-ms="222" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=createNewManageNews status=SKIP method=ManageNewsTest.createNewManageNews()[pri:0, instance:testscript.ManageNewsTest@7d3e8655] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserIsNotAbleToLoginWithInvalidCredentials status=SUCCESS method=LoginTest.verifyUserIsNotAbleToLoginWithInvalidCredentials()[pri:0, instance:testscript.LoginTest@38145825] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="initialisebrowser(java.lang.String)[pri:0, instance:testscript.ManageNewsTest@7d3e8655]" started-at="2026-07-15T11:42:12 IST" name="initialisebrowser" finished-at="2026-07-15T11:42:15 IST" duration-ms="3080" status="PASS">
+        <test-method is-config="true" signature="initialisebrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@38145825]" started-at="2026-07-16T23:56:13 IST" name="initialisebrowser" finished-at="2026-07-16T23:56:16 IST" duration-ms="2434" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -116,91 +44,22 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialisebrowser -->
-        <test-method retried="true" signature="createNewManageNews()[pri:0, instance:testscript.ManageNewsTest@7d3e8655]" started-at="2026-07-15T11:42:15 IST" name="createNewManageNews" description="for managing news" finished-at="2026-07-15T11:42:18 IST" duration-ms="2246" status="SKIP">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element is not clickable at point (414, 735)
-  (Session info: chrome=150.0.7871.102)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f97e3870381f2d101bb53a8a495c667d, clickElement {id=f.8784583F796B1D634908351674BFF7D5.d.8F34A7FE26361EDF55F8D4C4EFCB31F3.e.24}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.102, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\jijin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54258}, goog:processID: 22156, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54258/devtoo..., se:cdpVersion: 150.0.7871.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (f97e3870381f2d101bb53a8a495c667d)] -> xpath: //a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-news']]
-Session ID: f97e3870381f2d101bb53a8a495c667d]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (414, 735)
-  (Session info: chrome=150.0.7871.102)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f97e3870381f2d101bb53a8a495c667d, clickElement {id=f.8784583F796B1D634908351674BFF7D5.d.8F34A7FE26361EDF55F8D4C4EFCB31F3.e.24}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.102, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\jijin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54258}, goog:processID: 22156, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54258/devtoo..., se:cdpVersion: 150.0.7871.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (f97e3870381f2d101bb53a8a495c667d)] -> xpath: //a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-news']]
-Session ID: f97e3870381f2d101bb53a8a495c667d
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-at pages.ManageNewsPage.clickManageNewsMoreInfo(ManageNewsPage.java:35)
-at testscript.ManageNewsTest.createNewManageNews(ManageNewsTest.java:26)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        <test-method signature="verifyUserIsNotAbleToLoginWithInvalidEmail()[pri:0, instance:testscript.LoginTest@38145825]" started-at="2026-07-16T23:56:16 IST" name="verifyUserIsNotAbleToLoginWithInvalidEmail" finished-at="2026-07-16T23:56:16 IST" duration-ms="608" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createNewManageNews -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageNewsTest@7d3e8655]" started-at="2026-07-15T11:42:18 IST" name="browserQuit" finished-at="2026-07-15T11:42:18 IST" duration-ms="314" status="PASS">
+        </test-method> <!-- verifyUserIsNotAbleToLoginWithInvalidEmail -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@38145825]" started-at="2026-07-16T23:56:16 IST" name="browserQuit" finished-at="2026-07-16T23:56:17 IST" duration-ms="205" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=createNewManageNews status=SKIP method=ManageNewsTest.createNewManageNews()[pri:0, instance:testscript.ManageNewsTest@7d3e8655] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserIsNotAbleToLoginWithInvalidEmail status=SUCCESS method=LoginTest.verifyUserIsNotAbleToLoginWithInvalidEmail()[pri:0, instance:testscript.LoginTest@38145825] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="initialisebrowser(java.lang.String)[pri:0, instance:testscript.ManageNewsTest@7d3e8655]" started-at="2026-07-15T11:42:18 IST" name="initialisebrowser" finished-at="2026-07-15T11:42:21 IST" duration-ms="3379" status="PASS">
+        <test-method is-config="true" signature="initialisebrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@38145825]" started-at="2026-07-16T23:56:17 IST" name="initialisebrowser" finished-at="2026-07-16T23:56:19 IST" duration-ms="2551" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -211,91 +70,22 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialisebrowser -->
-        <test-method signature="createNewManageNews()[pri:0, instance:testscript.ManageNewsTest@7d3e8655]" started-at="2026-07-15T11:42:21 IST" name="createNewManageNews" description="for managing news" finished-at="2026-07-15T11:42:24 IST" duration-ms="2618" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element is not clickable at point (414, 720)
-  (Session info: chrome=150.0.7871.102)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ddee8ce1fd6552b7bf532df6705a7040, clickElement {id=f.00739E2AA46C9152CA82192395A805BD.d.73D0D3547CA5AC3EF458FD9C99C4D1AA.e.29}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.102, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\jijin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55300}, goog:processID: 19152, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55300/devtoo..., se:cdpVersion: 150.0.7871.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (ddee8ce1fd6552b7bf532df6705a7040)] -> xpath: //a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-news']]
-Session ID: ddee8ce1fd6552b7bf532df6705a7040]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (414, 720)
-  (Session info: chrome=150.0.7871.102)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ddee8ce1fd6552b7bf532df6705a7040, clickElement {id=f.00739E2AA46C9152CA82192395A805BD.d.73D0D3547CA5AC3EF458FD9C99C4D1AA.e.29}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.102, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\jijin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55300}, goog:processID: 19152, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55300/devtoo..., se:cdpVersion: 150.0.7871.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (ddee8ce1fd6552b7bf532df6705a7040)] -> xpath: //a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-news']]
-Session ID: ddee8ce1fd6552b7bf532df6705a7040
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-at pages.ManageNewsPage.clickManageNewsMoreInfo(ManageNewsPage.java:35)
-at testscript.ManageNewsTest.createNewManageNews(ManageNewsTest.java:26)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        <test-method signature="verifyUserIsNotAbleToLoginWithInvalidPassword()[pri:0, instance:testscript.LoginTest@38145825]" started-at="2026-07-16T23:56:19 IST" name="verifyUserIsNotAbleToLoginWithInvalidPassword" finished-at="2026-07-16T23:56:20 IST" duration-ms="585" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createNewManageNews -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageNewsTest@7d3e8655]" started-at="2026-07-15T11:42:24 IST" name="browserQuit" finished-at="2026-07-15T11:42:25 IST" duration-ms="907" status="PASS">
+        </test-method> <!-- verifyUserIsNotAbleToLoginWithInvalidPassword -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@38145825]" started-at="2026-07-16T23:56:20 IST" name="browserQuit" finished-at="2026-07-16T23:56:20 IST" duration-ms="177" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=createNewManageNews status=FAILURE method=ManageNewsTest.createNewManageNews()[pri:0, instance:testscript.ManageNewsTest@7d3e8655] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserIsNotAbleToLoginWithInvalidPassword status=SUCCESS method=LoginTest.verifyUserIsNotAbleToLoginWithInvalidPassword()[pri:0, instance:testscript.LoginTest@38145825] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-      </class> <!-- testscript.ManageNewsTest -->
+      </class> <!-- testscript.LoginTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

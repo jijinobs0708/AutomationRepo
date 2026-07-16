@@ -11,13 +11,13 @@ import com.aventstack.extentreports.Status;
 
 import utilities.ExtendReportUtility;
 
-public class Listeners implements ITestListener{
+public class Listeners implements ITestListener{ // ItestListener- testng provide interface for generating detailed extent report
 	ExtentTest test; 
 	  
  	ExtentReports extent = ExtendReportUtility.createExtentReports(); 
  	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>(); //ThreadLocal given for synchronisation
   
- 	public void onTestStart(ITestResult result) { //methods inside ITestListener
+ 	public void onTestStart(ITestResult result) { //all methods are called inside ITestListener, so its showing over rides
   
  		ITestListener.super.onTestStart(result); 
  		test = extent.createTest(result.getMethod().getMethodName()); 

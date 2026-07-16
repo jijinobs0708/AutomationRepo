@@ -18,48 +18,41 @@ import utilities.ScreenshotUtility;
 import utilities.WaitUtility;
 
 public class Base {
-public WebDriver driver;
-Properties pr;
-FileInputStream fileinputstream;
-@BeforeMethod(alwaysRun = true)
-@Parameters("browser")
-public void initialisebrowser(String browser) throws Exception
-{
-	try
-	{
-		pr = new Properties();
-		fileinputstream = new FileInputStream(Constant.CONFIGFILE);
-		pr.load(fileinputstream);
+	public WebDriver driver;
+	Properties pr;
+	FileInputStream fileinputstream;
+
+	@BeforeMethod(alwaysRun = true)
+	@Parameters("browser")
+	public void initialisebrowser(String browser) throws Exception {
+		try {
+			pr = new Properties();
+			fileinputstream = new FileInputStream(Constant.CONFIGFILE);
+			pr.load(fileinputstream);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		if (browser.equalsIgnoreCase("Chrome")) {
+			driver = new ChromeDriver();
+		} else if (browser.equalsIgnoreCase("Firefox")) {
+			driver = new FirefoxDriver();
+		} else {
+			throw new Exception("invalid broswer");
+		}
+		// driver.get("https://groceryapp.uniqassosiates.com/admin/login");
+		driver.get(pr.getProperty("url"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WaitUtility.IMPLICITWAIT));
+		driver.manage().window().maximize();
+
 	}
-	catch(Exception e)
-	{
-		System.out.println(e);
+
+	@AfterMethod(alwaysRun = true)
+	public void browserQuit(ITestResult iTestResult) throws IOException {
+		if (iTestResult.getStatus() == ITestResult.FAILURE) {
+			ScreenshotUtility scrShot = new ScreenshotUtility(); // creating obj
+			scrShot.getScreenShot(driver, iTestResult.getName());
+		}
+
+		driver.quit();
 	}
-	if(browser.equalsIgnoreCase("Chrome"))
-	{
-		driver = new ChromeDriver();	
-	}
-	else if(browser.equalsIgnoreCase("Firefox"))
-	{
-		driver = new FirefoxDriver();
-	}
-	else
-	{
-		throw new Exception("invalid broswer");
-	}
-	//driver.get("https://groceryapp.uniqassosiates.com/admin/login");
-	driver.get(pr.getProperty("url"));
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WaitUtility.IMPLICITWAIT));
-	driver.manage().window().maximize();
-	
-}
-@AfterMethod(alwaysRun = true)
-public void browserQuit(ITestResult iTestResult) throws IOException {
-	if (iTestResult.getStatus() == ITestResult.FAILURE) {
-		ScreenshotUtility scrShot = new ScreenshotUtility(); // creating obj
-		scrShot.getScreenShot(driver, iTestResult.getName());
-	}
-	
-	driver.quit();
-}
 }
