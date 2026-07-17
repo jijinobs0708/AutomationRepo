@@ -2,14 +2,16 @@ package testscript;
 
 import pages.LoginPage;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.HomePage;
 
 public class LogoutTest extends Base {
 	HomePage homepage;
 
-	@Test
+	@Test(description ="Testcase for logout")
 	public void verifyUserIsAbleToLogOutSuccessfullyFromDashboard() {
 		String usernamevalue = "admin";
 		String passwordvalue = "admin";
@@ -20,5 +22,7 @@ public class LogoutTest extends Base {
 		HomePage logoutpage = new HomePage(driver);
 		logoutpage.clickOnAdminButton();
 		logoutpage.clickOnLogOutButton();
+		boolean homepage = logoutpage.isHomePageDisplayed();
+		Assert.assertTrue(homepage,Constant.LOGOUT);
 	}
 }

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import utilities.PageUtility;
+//import utilities.PageUtility;
 
 
 public class ManageNewsPage {
@@ -17,7 +17,7 @@ public class ManageNewsPage {
  @FindBy(xpath = "//p[text() = 'Dashboard']") WebElement dashboard;
  @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']") WebElement alert;
  //WaitUtility waitutility = new WaitUtility();
- PageUtility pageutility = new PageUtility();
+ //PageUtility pageutility = new PageUtility();
  
  public ManageNewsPage(WebDriver driver) {
 	 this.driver = driver;

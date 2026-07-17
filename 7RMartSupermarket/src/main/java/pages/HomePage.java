@@ -16,6 +16,8 @@ public class HomePage {
 	@FindBy(xpath = "//a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-deliveryboy']") WebElement managedeliveryboymoreinfo;
 	@FindBy(xpath = "//a[@data-toggle='dropdown']")WebElement admin;
 	@FindBy(xpath = "//a[@class='dropdown-item' and @href='https://groceryapp.uniqassosiates.com/admin/logout']")WebElement logout;
+	@FindBy(xpath = "//p[text() = 'Dashboard']") WebElement dashboard;
+	@FindBy(xpath = "//div[@class='card-body login-card-body']")WebElement homepage;
 	PageUtility pageutility = new PageUtility();
 	
 	
@@ -69,4 +71,14 @@ public class HomePage {
 	  {
 		  logout.click();
 	  }
+	  public boolean isDashBoardDisplayed()
+	  {
+	 	return dashboard.isDisplayed();
+	  }
+	  public boolean isHomePageDisplayed()
+	  {
+	  	return homepage.isDisplayed();
+	  }
+	  
+	  
 }

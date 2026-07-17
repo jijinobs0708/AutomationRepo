@@ -5,13 +5,14 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LoginTest extends Base {
 HomePage homepage;
-
+@Test(description= "Testcase for logging with valid credentials")
 	public void verifyUserIsAbleToLoginWithValidCredentials() throws IOException
 	{
 	//String usernamevalue = "admin";
@@ -24,9 +25,9 @@ HomePage homepage;
 	// loginpage.password(passwordvalue);
 	homepage = loginpage.signIn();
 	boolean homepage = loginpage.isDashBoardDisplayed();
-	Assert.assertTrue(homepage);
+	Assert.assertTrue(homepage,Constant.LOGINVALIDCREDENTIALS);
 	}
-@Test
+@Test(description= "Testcase for logging with valid email and invalid password")
 public void verifyUserIsNotAbleToLoginWithInvalidPassword() throws IOException
 {
 	//String usernamevalue = "admin";
@@ -38,9 +39,9 @@ public void verifyUserIsNotAbleToLoginWithInvalidPassword() throws IOException
 	//loginpage.password(passwordvalue);
 	homepage =loginpage.signIn();
 	boolean alert = loginpage.isAlertDisplayed();
-	Assert.assertTrue(alert);
+	Assert.assertTrue(alert,Constant.LOGININVALIDPASSWORD);
 }
-@Test
+@Test(description= "Testcase for logging with invalid email and valid password")
 public void verifyUserIsNotAbleToLoginWithInvalidEmail() throws IOException
 {
 	//String usernamevalue = "ABCadmin";
@@ -52,9 +53,9 @@ public void verifyUserIsNotAbleToLoginWithInvalidEmail() throws IOException
 	//loginpage.password(passwordvalue);
 	homepage =loginpage.signIn();
 	boolean alert = loginpage.isAlertDisplayed();
-	Assert.assertTrue(alert);
+	Assert.assertTrue(alert,Constant.LOGININVALIDEMAIL);
 }
-@Test
+@Test(description= "Testcase for logging with invalid credentials")
 public void verifyUserIsNotAbleToLoginWithInvalidCredentials() throws IOException
 {
 	//String usernamevalue = "ABCadmin";
@@ -66,6 +67,6 @@ public void verifyUserIsNotAbleToLoginWithInvalidCredentials() throws IOExceptio
 	//loginpage.password(passwordvalue);
 	homepage =loginpage.signIn();
 	boolean alert = loginpage.isAlertDisplayed();
-	Assert.assertTrue(alert);
+	Assert.assertTrue(alert,Constant.LOGININVALIDCREDENTIALS);
 }
 }

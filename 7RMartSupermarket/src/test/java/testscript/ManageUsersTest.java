@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageUsersPage;
@@ -29,7 +30,7 @@ public class ManageUsersTest extends Base {
 		manageuserspage.addNameForSearching(namevalue);
 		manageuserspage.clickSearchbutton();
 		boolean searchbutton = manageuserspage.isSearchResultDisplayed();
-		Assert.assertTrue(searchbutton);
+		Assert.assertTrue(searchbutton, Constant.MANAGEUSERSEARCH);
 
 	}
 }
