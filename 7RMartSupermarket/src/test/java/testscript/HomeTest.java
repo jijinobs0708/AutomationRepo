@@ -8,9 +8,9 @@ import org.testng.annotations.Test;
 import constant.Constant;
 import pages.HomePage;
 
-public class LogoutTest extends Base {
+public class HomeTest extends Base {
 	HomePage homepage;
-
+	LoginPage loginpage;
 	@Test(description ="Testcase for logout")
 	public void verifyUserIsAbleToLogOutSuccessfullyFromDashboard() {
 		String usernamevalue = "admin";
@@ -19,10 +19,9 @@ public class LogoutTest extends Base {
 		loginpage.enterUserName(usernamevalue).enterPassword(passwordvalue);
 		// loginpage.password(passwordvalue);
 		homepage = loginpage.signIn();
-		HomePage logoutpage = new HomePage(driver);
-		logoutpage.clickOnAdminButton();
-		logoutpage.clickOnLogOutButton();
-		boolean homepage = logoutpage.isHomePageDisplayed();
-		Assert.assertTrue(homepage,Constant.LOGOUT);
+		homepage.clickOnAdminButton();
+		loginpage = homepage.clickOnLogOutButton();
+		boolean login = homepage.isLoginPageDisplayed();
+		Assert.assertTrue(login,Constant.LOGOUT);
 	}
 }

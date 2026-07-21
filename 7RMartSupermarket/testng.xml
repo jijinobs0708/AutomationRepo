@@ -12,9 +12,10 @@
       <class name="testscript.ManageNewsTest"/>
       <class name="testscript.ManageDeliveryBoyTest"/>
       <class name="testscript.ManageUsersTest"/>
-      <class name="testscript.ManageNewsTest
-      <class name="testscript.LoginTest"/>-->
       <class name="testscript.ManageNewsTest"/>
+      <class name = "testscript.HomeTest"/>
+      <class name="testscript.LoginTest"/>-->
+     <class name="testscript.ManageNewsTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

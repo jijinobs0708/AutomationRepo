@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-17T00:34:06 IST" name="Suite" finished-at="2026-07-17T00:34:14 IST" duration-ms="7402">
+  <suite started-at="2026-07-21T14:13:18 IST" name="Suite" finished-at="2026-07-21T14:13:35 IST" duration-ms="16875">
     <groups>
-      <group name="regression">
-        <method signature="ManageNewsTest.createNewManageNews()[pri:0, instance:testscript.ManageNewsTest@66ea810]" name="createNewManageNews" class="testscript.ManageNewsTest"/>
-      </group> <!-- regression -->
     </groups>
-    <test started-at="2026-07-17T00:34:06 IST" name="Test" finished-at="2026-07-17T00:34:14 IST" duration-ms="7402">
-      <class name="testscript.ManageNewsTest">
-        <test-method is-config="true" signature="initialisebrowser(java.lang.String)[pri:0, instance:testscript.ManageNewsTest@66ea810]" started-at="2026-07-17T00:34:06 IST" name="initialisebrowser" finished-at="2026-07-17T00:34:10 IST" duration-ms="3295" status="PASS">
+    <test started-at="2026-07-21T14:13:18 IST" name="Test" finished-at="2026-07-21T14:13:35 IST" duration-ms="16875">
+      <class name="testscript.LoginTest">
+        <test-method is-config="true" signature="initialisebrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@2254127a]" started-at="2026-07-21T14:13:18 IST" name="initialisebrowser" finished-at="2026-07-21T14:13:21 IST" duration-ms="3410" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,22 +18,100 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialisebrowser -->
-        <test-method signature="createNewManageNews()[pri:0, instance:testscript.ManageNewsTest@66ea810]" started-at="2026-07-17T00:34:10 IST" name="createNewManageNews" description="for managing news" finished-at="2026-07-17T00:34:13 IST" duration-ms="3713" status="PASS">
+        <test-method signature="verifyUserIsAbleToLoginWithValidCredentials()[pri:0, instance:testscript.LoginTest@2254127a]" started-at="2026-07-21T14:13:21 IST" name="verifyUserIsAbleToLoginWithValidCredentials" description="Testcase for logging with valid credentials" finished-at="2026-07-21T14:13:24 IST" duration-ms="2785" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createNewManageNews -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageNewsTest@66ea810]" started-at="2026-07-17T00:34:13 IST" name="browserQuit" finished-at="2026-07-17T00:34:14 IST" duration-ms="330" status="PASS">
+        </test-method> <!-- verifyUserIsAbleToLoginWithValidCredentials -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@2254127a]" started-at="2026-07-21T14:13:24 IST" name="browserQuit" finished-at="2026-07-21T14:13:24 IST" duration-ms="265" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=createNewManageNews status=SUCCESS method=ManageNewsTest.createNewManageNews()[pri:0, instance:testscript.ManageNewsTest@66ea810] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserIsAbleToLoginWithValidCredentials status=SUCCESS method=LoginTest.verifyUserIsAbleToLoginWithValidCredentials()[pri:0, instance:testscript.LoginTest@2254127a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-      </class> <!-- testscript.ManageNewsTest -->
+        <test-method is-config="true" signature="initialisebrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@2254127a]" started-at="2026-07-21T14:13:24 IST" name="initialisebrowser" finished-at="2026-07-21T14:13:27 IST" duration-ms="2584" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialisebrowser -->
+        <test-method signature="verifyUserIsNotAbleToLoginWithInvalidCredentials()[pri:0, instance:testscript.LoginTest@2254127a]" started-at="2026-07-21T14:13:27 IST" name="verifyUserIsNotAbleToLoginWithInvalidCredentials" description="Testcase for logging with invalid credentials" finished-at="2026-07-21T14:13:28 IST" duration-ms="674" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserIsNotAbleToLoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@2254127a]" started-at="2026-07-21T14:13:28 IST" name="browserQuit" finished-at="2026-07-21T14:13:28 IST" duration-ms="223" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserIsNotAbleToLoginWithInvalidCredentials status=SUCCESS method=LoginTest.verifyUserIsNotAbleToLoginWithInvalidCredentials()[pri:0, instance:testscript.LoginTest@2254127a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuit -->
+        <test-method is-config="true" signature="initialisebrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@2254127a]" started-at="2026-07-21T14:13:28 IST" name="initialisebrowser" finished-at="2026-07-21T14:13:30 IST" duration-ms="2731" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialisebrowser -->
+        <test-method signature="verifyUserIsNotAbleToLoginWithInvalidEmail()[pri:0, instance:testscript.LoginTest@2254127a]" started-at="2026-07-21T14:13:30 IST" name="verifyUserIsNotAbleToLoginWithInvalidEmail" description="Testcase for logging with invalid email and valid password" finished-at="2026-07-21T14:13:31 IST" duration-ms="590" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserIsNotAbleToLoginWithInvalidEmail -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@2254127a]" started-at="2026-07-21T14:13:31 IST" name="browserQuit" finished-at="2026-07-21T14:13:31 IST" duration-ms="216" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserIsNotAbleToLoginWithInvalidEmail status=SUCCESS method=LoginTest.verifyUserIsNotAbleToLoginWithInvalidEmail()[pri:0, instance:testscript.LoginTest@2254127a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuit -->
+        <test-method is-config="true" signature="initialisebrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@2254127a]" started-at="2026-07-21T14:13:31 IST" name="initialisebrowser" finished-at="2026-07-21T14:13:34 IST" duration-ms="2474" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialisebrowser -->
+        <test-method signature="verifyUserIsNotAbleToLoginWithInvalidPassword()[pri:0, instance:testscript.LoginTest@2254127a]" started-at="2026-07-21T14:13:34 IST" name="verifyUserIsNotAbleToLoginWithInvalidPassword" description="Testcase for logging with valid email and invalid password" finished-at="2026-07-21T14:13:34 IST" duration-ms="623" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserIsNotAbleToLoginWithInvalidPassword -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@2254127a]" started-at="2026-07-21T14:13:34 IST" name="browserQuit" finished-at="2026-07-21T14:13:35 IST" duration-ms="207" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserIsNotAbleToLoginWithInvalidPassword status=SUCCESS method=LoginTest.verifyUserIsNotAbleToLoginWithInvalidPassword()[pri:0, instance:testscript.LoginTest@2254127a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuit -->
+      </class> <!-- testscript.LoginTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
